@@ -5,15 +5,28 @@
     --off-white: #F7EEE5;
 }
 
+.playfair-display-header {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.playfair-display-header-2 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 html,
 body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background: linear-gradient(-45deg, var(--darkest-green), var(--dark-green), var(--green), black);
+    background: linear-gradient(-45deg, var(--darkest-green), var(--green), black);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 30s ease infinite;
     height: 100vh;
 }
 
@@ -49,4 +62,48 @@ body {
     font-size: 24px;
     margin-left: 15%;
     margin-right: 15%;
+}
+
+.main-pg-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-pg-btn {
+    font-size: 24px;
+    color: var(--off-white);
+    border-radius: 10%;
+    width: 246px;
+    height: 124px;
+    margin: 24px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.main-pg-btn:hover {
+    background-color: var(--off-white);
+    color: var(--darkest-green);
+    -moz-box-shadow: 0px 0px 4px 1px grey;
+    -webkit-box-shadow: 0px 0px 4px 1px grey;
+    box-shadow: 0px 0px 4px 1px grey;
+    transition: all 0.5s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
