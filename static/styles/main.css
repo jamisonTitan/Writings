@@ -1,0 +1,52 @@
+:root {
+    --darkest-green: #28341C;
+    --dark-green: #364327;
+    --green: #4D5C3C;
+    --off-white: #F7EEE5;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: linear-gradient(-45deg, var(--darkest-green), var(--dark-green), var(--green), black);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: var(--off-white);
+    border-bottom: 2px var(--off-white) solid;
+    padding-bottom: 12px;
+}
+
+.main-desc {
+    color: var(--off-white);
+    font-size: 24px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
